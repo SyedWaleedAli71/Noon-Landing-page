@@ -1,29 +1,44 @@
 .manu-navbar {
   width: 100%;
+  box-sizing: border-box;
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding: 0 12px;
+  overflow-x: hidden;
 }
 
 .manu-navbar-inner {
   display: flex;
   align-items: center;
-  gap: 16px;
-  height: 56px;
+  gap: 12px;
+  min-height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .manu-navbar-tabs-wrapper {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.manu-navbar-tabs-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .manu-navbar-tabs {
   min-height: 56px;
+  width: 100%;
 }
 
 .manu-navbar-tabs .MuiTabs-flexContainer {
   gap: 8px;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .manu-navbar-tabs .MuiTabs-indicator {
@@ -64,6 +79,7 @@
 
 .manu-navbar-action {
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .manu-navbar-button {
@@ -72,21 +88,26 @@
   color: #000;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 999px;
-  padding: 8px 16px;
+  padding: 8px 10px;
   box-shadow: none;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .manu-navbar-button:hover {
-  background: #fff;
+  background: #3c3a3a;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .manu-navbar-button-label {
   margin-right: 8px;
   font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .manu-navbar-button-pill {
@@ -95,4 +116,48 @@
   padding: 6px 10px;
   border-radius: 8px;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .manu-navbar-inner {
+    padding: 8px 0;
+  }
+
+  .manu-navbar-action {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .manu-navbar-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .manu-navbar {
+    padding: 0 8px;
+  }
+
+  .manu-navbar-inner {
+    gap: 8px;
+  }
+
+  .manu-navbar-tab {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 0.78rem;
+  }
+
+  .manu-navbar-button {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .manu-navbar-button-label,
+  .manu-navbar-button-pill {
+    margin: 0;
+  }
 }

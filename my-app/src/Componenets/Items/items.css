@@ -1,0 +1,152 @@
+.items-section {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  padding: 15px 16px 13px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.items-header {
+   display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.items-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.items-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.items-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.items-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.items-card {
+  flex: 0 0 120px;
+  min-width: 90px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f1f0f0;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.items-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+}
+
+.items-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.items-card p,
+.items-card span,
+.items-card h2,
+.items-card h3,
+.items-card h4,
+.items-card h5,
+.items-card h6,
+.items-card small {
+  margin: 0;
+}
+
+.items-card span,
+.items-card h2,
+.items-card h3,
+.items-card h4,
+.items-card h5,
+.items-card h6,
+.items-card small {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 10px 14px;
+}
+
+@media (max-width: 1200px) {
+  .items-card {
+    flex: 0 0 160px;
+    min-width: 100px;
+  }
+
+  .items-card img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .items-card {
+    flex: 0 0 150px;
+    min-width: 150px;
+  }
+
+  .items-card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .items-section {
+    padding: 16px 10px 18px;
+  }
+
+  .items-controls {
+    gap: 4px;
+  }
+
+  .items-card {
+    flex: 0 0 130px;
+    min-width: 130px;
+  }
+
+  .items-card img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 400px) {
+  .items-card {
+    flex: 0 0 110px;
+    min-width: 110px;
+  }
+
+  .items-card img {
+    height: 110px;
+  }
+
+  .items-card span,
+  .items-card h2,
+  .items-card h3,
+  .items-card h4,
+  .items-card h5,
+  .items-card h6,
+  .items-card small {
+    font-size: 0.8rem;
+    padding: 8px 6px 10px;
+  }
+}

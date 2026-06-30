@@ -5,6 +5,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './Componenets/Navbar/navbar.jsx';
 import ManuNavbar from './Componenets/ManuNavbar/ManuNavbar.jsx';
+import Items from './Componenets/Items/items.jsx';
 import Slider from './Componenets/Slider/slider.jsx';
 import MainSlider from './Componenets/mainSlider/mainSlider.jsx';
 
@@ -15,9 +16,10 @@ function App() {
   return (
     <>
        <Navbar />
-       {/* <ManuNavbar /> */}
+       <ManuNavbar />
        <Slider />
        <MainSlider />
+       <Items />
     </>
 
   )
