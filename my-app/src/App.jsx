@@ -8,7 +8,7 @@ import ManuNavbar from './Componenets/ManuNavbar/ManuNavbar.jsx';
 import Items from './Componenets/Items/items.jsx';
 import Slider from './Componenets/Slider/slider.jsx';
 import MainSlider from './Componenets/mainSlider/mainSlider.jsx';
-
+import ProductGrid from "./Componenets/ProductCard/Productgrid.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +20,7 @@ function App() {
        <Slider />
        <MainSlider />
        <Items />
+        <ProductGrid />
     </>
 
   )
